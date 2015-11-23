@@ -25,6 +25,12 @@ Enter your IEEE8021X indentity and password when asked.
 
 This script will install wpad and wpa-cli for you.
 
+If you DO NOT have Internet access during installation, this script will complain.
+
+But don't worry. After running install.sh, use this command to install offline packages:
+
+	$ unzip -o data.zip -d /extdisks/sda1
+
 ##### Configuration
 
 The configuration file's location is /etc/wpa_supplicant.conf. Modify it if you need.

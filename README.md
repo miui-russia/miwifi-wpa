@@ -16,12 +16,12 @@ Plug this storage device into your router.
 
 Make sure you have root access to your router.
 
-Use this commands to install:
+Use these commands to install:
 
 	$ cd miwifi-wpa
 	$ ./install.sh
 
-Enter your IEEE8021X indentity and password when asked.
+Enter your IEEE 802.1X indentity and password when asked.
 
 This script will install wpad and wpa-cli for you.
 
@@ -35,18 +35,18 @@ But don't worry. After running install.sh, use this command to install offline p
 
 The configuration file's location is /etc/wpa_supplicant.conf. Modify it if you need.
 
-##### Usage
+### Usage
 
-Use this commands to start wpad:
+Use this command to start wpad:
 
 	$ ./wpa-service start
 
 
-Use this commands to check the status of wpa_cli:
+Use this command to check the status of wpa_cli:
 
 	$ ./wpa-service status
 
-Use this commands to stop wpad:
+Use this command to stop wpad:
 
 	$ ./wpa-service stop
 

@@ -1,0 +1,44 @@
+#!/bin/sh /etc/rc.common
+
+START=40
+EXTRA_COMMANDS="status"
+EXTRA_HELP="	status  Check the status of wpa_cli"
+
+
+# Configuration
+# -------------
+
+ROOTDIR=/extdisks/sda1/data
+config_file="/etc/wpa_supplicant.conf"
+
+
+# Start
+# -----
+
+start() {
+	$ROOTDIR/usr/sbin/wpa_supplicant \
+	-i eth0.2 -D wired -c $config_file -B
+	
+	return 0
+}
+
+
+# Status
+# ------
+
+status() {
+	$ROOTDIR/usr/sbin/wpa_cli status
+	
+	return 0
+}
+
+
+# Stop
+# ----
+
+stop() {
+	$ROOTDIR/usr/sbin/wpa_cli logoff
+	$ROOTDIR/usr/sbin/wpa_cli terminate
+	
+	return 0
+}

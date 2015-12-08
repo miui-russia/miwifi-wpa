@@ -54,4 +54,14 @@ echo "	password=\"$psw\"" >> $config_file
 echo "	eapol_flags=0" >> $config_file
 echo "}" >> $config_file
 
+
+# init script
+# -----------
+
+echo "Install init script..."
+cp wpa /etc/init.d/
+chmod 755 /etc/init.d/wpa
+/etc/init.d/wpa enable
+
 echo "Finished."
+echo "Use command '/etc/init.d/wpa start' to start the service."

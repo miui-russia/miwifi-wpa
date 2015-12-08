@@ -39,16 +39,16 @@ The configuration file's location is /etc/wpa_supplicant.conf. Modify it if you 
 
 Use this command to start wpad:
 
-	$ ./wpa-service start
+	$ /etc/init.d/wpa start
 
 
 Use this command to check the status of wpa_cli:
 
-	$ ./wpa-service status
+	$ /etc/init.d/wpa status
 
 Use this command to stop wpad:
 
-	$ ./wpa-service stop
+	$ /etc/init.d/wpa stop
 
 ### Contact
 

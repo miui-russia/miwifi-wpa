@@ -1,6 +1,6 @@
 #!/bin/sh /etc/rc.common
 
-START=40
+START=99
 EXTRA_COMMANDS="status"
 EXTRA_HELP="	status  Check the status of wpa_cli"
 
